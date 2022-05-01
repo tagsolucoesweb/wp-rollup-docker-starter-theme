@@ -1,0 +1,19 @@
+.shantal-header-outer {
+  padding: 22px 0 44px;
+
+  .shantal-header-inner {
+    @include container;
+
+    width: 95%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    @include breakpoint(sm-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: unset;
+    }
+  }
+}

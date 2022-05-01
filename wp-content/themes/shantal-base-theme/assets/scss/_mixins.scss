@@ -1,0 +1,39 @@
+$breakpoints: (
+  "mobile": ( min-width:  425px ),
+  "sm-tablet":  ( min-width:  767px ),
+  "lg-tablet": ( min-width:  1025px ),
+  "sm-desktop":  ( min-width: 1200px ),
+  "hd":  ( min-width: 1440px ),
+  "lg-desktop":  ( min-width: 1600px ),
+) !default;
+
+@mixin breakpoint($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    // sass-lint:disable max-line-length
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. ";
+  }
+}
+
+@mixin container {
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+
+  @include breakpoint(sm-tablet) {
+    width: 90%;
+  }
+
+  @include breakpoint(sm-desktop) {
+    width: 80%;
+  }
+}

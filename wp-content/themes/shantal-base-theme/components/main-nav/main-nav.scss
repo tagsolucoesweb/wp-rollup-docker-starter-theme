@@ -1,0 +1,113 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  @include breakpoint(lg-tablet) {
+    flex-basis: 60%;
+    gap: 60px;
+  }
+
+  .obj-header-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+
+    span {
+      cursor: pointer;
+
+      @include breakpoint(lg-tablet) {
+        display: none;
+      }
+    }
+
+    a {
+      svg {
+        path {
+          stroke: $main-text-color;
+        }
+      }
+    }
+  }
+
+  .main-menu-wrap {
+    flex-basis: 80%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgb(255 255 255 / 97%);
+    transition: all 0.3s ease;
+
+    @include breakpoint(lg-tablet) {
+      display: inline-block;
+      position: initial;
+      height: auto;
+      min-width: unset;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    .menu-menu-main-container {
+      padding: 0 40px 40px;
+
+      @include breakpoint(lg-tablet) {
+        padding: 0;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-weight: bold;
+        list-style: none;
+        flex-direction: column;
+        margin-top: 20px;
+
+        @include breakpoint(lg-tablet) {
+          flex-direction: row;
+          margin-top: unset;
+          justify-content: end;
+        }
+
+        li {
+          a {
+            font: 500 16px/20px $main-font;
+            color: $main-text-color;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .theme-logo {
+      padding: 40px 40px 0;
+      width: 200px;
+
+      @include breakpoint(lg-tablet) {
+        display: none;
+      }
+    }
+
+    .close-menu-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+
+      @include breakpoint(lg-tablet) {
+        display: none;
+      }
+    }
+
+    &.active {
+      width: 320px;
+    }
+  }
+}
