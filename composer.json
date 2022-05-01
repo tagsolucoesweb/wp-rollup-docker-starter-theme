@@ -1,0 +1,40 @@
+{
+    "name": "tagsw/shantal-base",
+    "autoload": {
+        "psr-4": {
+            "Gus\\ObjEcommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "tagsw",
+            "email": "gustavoag@tagsw.com.br"
+        }
+    ],
+    "repositories": {
+        "0":{
+            "type": "composer",
+            "url": "https://wpackagist.org/"
+        },
+        "advanced-custom-fields-pro": { 
+            "type": "package",
+            "package": {
+                "name": "tagsolucoesweb/acf",
+                "type": "wordpress-plugin",
+                "require" : {
+                    "composer/installers" : "~1.0"
+                },
+                "version": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:tagsolucoesweb/acf.git",
+                    "reference": "main"
+                }
+            }
+        }
+    },
+    "require": {
+        "wpackagist-plugin/ewww-image-optimizer": "6.4.2",
+        "tagsolucoesweb/acf": "dev-main"
+    }
+}

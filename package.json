@@ -1,0 +1,45 @@
+{
+  "name": "shantal-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run bundle",
+    "dev": "trap 'exit 0' INT; npm run init-server && npx rollup --config --watch",
+    "postdev": "npm run stop-server",
+    "bundle": "npx rollup --config",
+    "init-server": "docker-compose up -d",
+    "stop-server": "docker-compose down",
+    "lint": "npm run lint-scss-fix && npm run lint-scss && npm run lint-js-fix && npm run lint-js",
+    "lint-scss": "npx stylelint 'wp-content/themes/shantal-base-theme/**/*.scss'",
+    "lint-scss-fix": "npx stylelint --fix 'wp-content/themes/shantal-base-theme/**/*.scss'",
+    "lint-js": "npx eslint wp-content/themes/shantal-base-theme/**/*.js",
+    "lint-js-fix": "npx eslint --fix wp-content/themes/shantal-base-theme/**/*.js",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tagsolucoesweb/shantal-base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tagsolucoesweb/shantal-base/issues"
+  },
+  "homepage": "https://github.com/tagsolucoesweb/shantal-base#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@rollup/plugin-babel": "^5.3.1",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.11.0",
+    "husky": "^7.0.0",
+    "postcss": "^8.4.12",
+    "rollup": "^2.70.0",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.49.9",
+    "stylelint": "^14.6.0",
+    "stylelint-config-standard-scss": "^3.0.0"
+  }
+}
