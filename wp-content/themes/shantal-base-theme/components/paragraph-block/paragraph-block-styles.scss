@@ -1,0 +1,62 @@
+.sh-paragraph-block-outer {
+  position: relative;
+
+  .sh-paragraph-block-inner {
+    @include container;
+
+    p {
+      text-align: center;
+      margin: 0 auto;
+      width: 90%;
+      padding-top: calc(124px / 2);
+      padding-bottom: calc(124px / 2);
+
+      @include breakpoint(lg-tablet) {
+        padding-top: calc(250px / 2);
+        padding-bottom: unset;
+        width: 80%;
+      }
+
+      @include breakpoint(sm-desktop) {
+        width: 90%;
+      }
+
+      @include breakpoint(hd) {
+        max-width: 1457px;
+        width: 95%;
+      }
+    }
+  }
+
+  .sh-paragraph-img {
+    position: absolute;
+    display: none;
+
+    @include breakpoint(sm-tablet) {
+      display: block;
+    }
+
+    img {
+      height: 124px;
+
+      @include breakpoint(lg-tablet) {
+        height: 250px;
+      }
+    }
+
+    &.sh-paragraph-img-left {
+      left: 0;
+      top: 0;
+    }
+
+    &.sh-paragraph-img-right {
+      right: 0;
+      bottom: 0;
+
+      @include breakpoint(lg-tablet) {
+        bottom: unset;
+        top: 0;
+      }
+    }
+  }
+}
