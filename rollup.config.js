@@ -1,8 +1,9 @@
 import scss from 'rollup-plugin-scss'
 import postcss from 'postcss'
 import autoprefixer from 'autoprefixer'
-import { babel } from '@rollup/plugin-babel';
-import { terser } from "rollup-plugin-terser";
+import { babel } from '@rollup/plugin-babel'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import { terser } from "rollup-plugin-terser"
 
 export default [{
     input: 'wp-content/themes/shantal-base-theme/assets/js/main.js',
@@ -23,6 +24,7 @@ export default [{
             watch: ['wp-content/themes/shantal-base-theme/components', 'wp-content/themes/shantal-base-theme/assets/scss']
         }),
         babel({ babelHelpers: 'bundled' }),
+        nodeResolve(),
         //terser()
     ]
 }];
