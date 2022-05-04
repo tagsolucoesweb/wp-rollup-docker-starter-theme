@@ -1,4 +1,13 @@
+//colors pallete
+$black: #000;
+$white: #fff;
+$gray: #444;
+$blue: blue;
+
 // defaults
 $container-max-width: 1600px;
 $main-font: "Montserrat", sans-serif;
 $main-text-color: #000;
+$button-bg-color: $gray;
+$button-bg-hover-color: $blue;
+$button-text-color: $white;

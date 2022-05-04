@@ -1,0 +1,19 @@
+.sh-rounded-button-wrap{
+    display: inline-block;
+    a{
+        display: inline-block;
+        border-radius: 50px;
+        max-width: 280px;
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+        transition: background-color .5s ease;
+        background-color: $button-bg-color;
+        color: $button-text-color;
+        font: 400 22px/25px $main-font;
+        text-transform: uppercase;
+        &:hover{
+            background-color: $button-bg-hover-color;
+        }
+    }
+}

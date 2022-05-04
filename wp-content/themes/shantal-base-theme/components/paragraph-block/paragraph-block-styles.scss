@@ -13,7 +13,7 @@
 
       @include breakpoint(lg-tablet) {
         padding-top: calc(250px / 2);
-        padding-bottom: unset;
+        padding-bottom: calc(250px / 2);
         width: 80%;
       }
 
