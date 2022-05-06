@@ -1,40 +1,46 @@
-.sh-wave-cta-block-outer{
-    position: relative;
-    min-height: 397px;
-    background-color:#eee;
-    .sh-wave-cta-block-inner{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 300px;
-        width: 90%;
-        margin: 0 auto;
-        &.cta-btn-pos-center{
-            & > div{
-                text-align: center;
-            }
-        }
-        &.cta-btn-pos-left{
-            & > div{
-                text-align: left;
-            }
-        }
-        &.cta-btn-pos-right{
-            & > div{
-                text-align: right;
-            }
-        }
+.sh-wave-cta-block-outer {
+  position: relative;
+  min-height: 397px;
+  background-color: #eee;
+
+  .sh-wave-cta-block-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    width: 90%;
+    margin: 0 auto;
+
+    &.cta-btn-pos-center {
+      & > div {
+        text-align: center;
+      }
     }
-    .sh-wave-divider{
-        height: 150px;
-        overflow: hidden;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        svg{
-            path{
-                fill: $white;
-            }
-        }
+
+    &.cta-btn-pos-left {
+      & > div {
+        text-align: left;
+      }
     }
+
+    &.cta-btn-pos-right {
+      & > div {
+        text-align: right;
+      }
+    }
+  }
+
+  .sh-wave-divider {
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
 }

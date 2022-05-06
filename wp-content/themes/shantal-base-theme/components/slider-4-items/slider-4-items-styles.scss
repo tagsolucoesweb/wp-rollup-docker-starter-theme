@@ -1,0 +1,128 @@
+.sh-slider-outer {
+  .sh-slider-inner {
+    @include container;
+
+    max-width: 90%;
+    position: relative;
+
+    .sh-slider {
+      .sh-slider-wrap {
+        .sh-slide {
+          .slide-img {
+            img {
+              max-width: 100%;
+            }
+          }
+
+          .slide-title {
+            font: 700 25px/38px $main-font;
+            text-align: center;
+            margin: 14px 0 8px;
+          }
+
+          .slide-text {
+            font: 400 18px/25.5px $main-font;
+            text-align: center;
+
+            p {
+              font: 400 18px/25.5px $main-font;
+              text-align: center;
+            }
+          }
+
+          .sh-square-small-button-wrap {
+            margin: 22px auto 0;
+          }
+        }
+      }
+
+      &.sh-slider-sqr-rounded {
+        .sh-slider-wrap {
+          .sh-slide {
+            .slide-img {
+              overflow: hidden;
+              border-radius: 25px;
+            }
+          }
+        }
+      }
+
+      &.sh-slider-rounded {
+        .sh-slider-wrap {
+          .sh-slide {
+            .slide-img {
+              overflow: hidden;
+              border-radius: 50%;
+              aspect-ratio: 1 / 1;
+              max-width: 200px;
+              margin: 0 auto;
+
+              @supports not (aspect-ratio: 1 / 1) {
+                .element::before {
+                  float: left;
+                  padding-top: 100%;
+                  content: "";
+                }
+
+                .element::after {
+                  display: block;
+                  content: "";
+                  clear: both;
+                }
+              }
+
+              img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                max-width: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sh-slider-next,
+    .sh-slider-prev {
+      position: absolute;
+      top: 45%;
+      display: none;
+
+      @include breakpoint(sm-tablet) {
+        display: block;
+      }
+
+      @include breakpoint(lg-tablet) {
+        top: 38%;
+      }
+
+      svg {
+        path,
+        circle {
+          stroke: #888;
+        }
+      }
+    }
+
+    .sh-slider-next {
+      right: -5%;
+
+      @include breakpoint(lg-tablet) {
+        right: -6%;
+      }
+    }
+
+    .sh-slider-prev {
+      left: -5%;
+
+      @include breakpoint(lg-tablet) {
+        left: -6%;
+      }
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

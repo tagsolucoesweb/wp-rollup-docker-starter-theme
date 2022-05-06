@@ -1,1 +1,0 @@
-import './sh-rounded-button-styles.scss';
