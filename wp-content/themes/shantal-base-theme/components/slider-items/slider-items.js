@@ -2,7 +2,7 @@ import Swiper, { Navigation, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import './slider-4-items-styles.scss'
+import './slider-items-styles.scss'
 
 let sliderContainer = '.sh-slider'
 let sliderSelector = document.querySelector(sliderContainer);
