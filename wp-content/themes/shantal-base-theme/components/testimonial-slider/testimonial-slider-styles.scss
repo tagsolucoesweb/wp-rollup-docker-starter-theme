@@ -1,0 +1,46 @@
+.testimonial-slider-outer {
+  background-color: $light-gray;
+  padding-bottom: 139px;
+  margin: 50px 0;
+
+  @include breakpoint(sm-tablet) {
+    padding-bottom: 112px;
+  }
+
+  .testimonial-slider-inner {
+    h2 {
+      text-align: center;
+      padding-top: 50px;
+      color: $white;
+      font: 400 32px / 64px $main-font;
+      margin-bottom: 60px;
+
+      @include breakpoint(sm-tablet) {
+        font: 400 42px / 84px $main-font;
+      }
+    }
+
+    .sh-slider {
+      .sh-testimonial-slide {
+        .sh-testimonial-slide-inner {
+          padding: 32px;
+          background-color: $white;
+          border-radius: 25px;
+
+          .slide-text {
+            margin-bottom: 12px;
+
+            p {
+              font: 400 24px / 26px $main-font;
+            }
+          }
+
+          .slide-author {
+            text-align: right;
+            font: 600 24px / 26px $main-font;
+          }
+        }
+      }
+    }
+  }
+}

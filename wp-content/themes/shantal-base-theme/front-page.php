@@ -11,9 +11,11 @@
             $slidesQueryArgs = array( 'post_type' => 'slides', 'fields' => 'ids');
             $querySlides = get_posts($slidesQueryArgs);
             $slides = get_posts_to_array($querySlides); 
-            $slides_args = array('slides-per-page' => '3', 'slide-type'=> 'sqr-rounded', 'slides' => $slides);
+            $slides_args = array('slides-per-page' => '3', 'img-slide-type'=> 'sqr-rounded', 'slides' => $slides, 'slider-type' => 'default');
         ?>
         <?php get_template_part('components/slider-items/slider-items', 'block', $slides_args);?>
+        <?php get_template_part('components/testimonial-slider/testimonial-slider', 'block');?>
+        
     </div>
 
 <?php get_footer();?>

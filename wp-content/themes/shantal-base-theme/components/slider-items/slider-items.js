@@ -4,31 +4,40 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import './slider-items-styles.scss'
 
-let sliderContainer = '.sh-slider'
-let sliderSelector = document.querySelector(sliderContainer);
+let sliders = document.querySelectorAll('.sh-slider-inner');
 
-let slideSetup = {
-    'slidesPerView': typeof sliderSelector.dataset.slides != "undefined" ? sliderSelector.dataset.slides : 2
-}
+sliders.forEach(sliderWrap => {
+    
+    let slider = sliderWrap.querySelector('.swiper');
+    let slideNext = sliderWrap.querySelector('.sh-slider-next');
+    let slidePrev = sliderWrap.querySelector('.sh-slider-prev');
 
-new Swiper(sliderContainer, {
-    slidesPerView: 1,
-    spaceBetween: 40,
-    modules: [Navigation, Pagination],
-    navigation: {
-        nextEl: '.sh-slider-next',
-        prevEl: '.sh-slider-prev',
-    },
-    breakpoints: {
-        768:{
-            slidesPerView: 2,
-            spaceBetween: 40,
-        },
-        1024:{
-            slidesPerView: slideSetup.slidesPerView,
-            spaceBetween: 40,
-        }
-
+    let slideSetup = {
+        'slidesPerView': typeof slider.dataset.slides != "undefined" ? slider.dataset.slides : 2
     }
+    
+    new Swiper(slider, {
+        slidesPerView: 1,
+        spaceBetween: 40,
+        modules: [Navigation, Pagination],
+        navigation: {
+            nextEl: slideNext,
+            prevEl: slidePrev,
+        },
+        breakpoints: {
+            768:{
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1024:{
+                slidesPerView: slideSetup.slidesPerView,
+                spaceBetween: 40,
+            }
+    
+        }
+    });
+    
 });
+
+
 
