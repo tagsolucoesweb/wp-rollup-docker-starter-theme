@@ -12,11 +12,14 @@
             $querySlides = get_posts($slidesQueryArgs);
             $slides = get_posts_to_array($querySlides); 
             $slides_args = array('slides-per-page' => '3', 'img-slide-type'=> 'sqr-rounded', 'slides' => $slides, 'slider-type' => 'default');
+            wp_reset_postdata();
         ?>
         <?php get_template_part('components/slider-items/slider-items', 'block', $slides_args);?>
         <?php get_template_part('components/testimonial-slider/testimonial-slider', 'block');?>
         <?php get_template_part('components/blog-posts/blog-posts', 'block');?>
         <?php get_template_part('components/team-grid/team-grid', 'block');?>
+        <?php $sbs_block_args = get_field('sh-side-by-side');?>
+        <?php get_template_part('components/side-by-side-txt-img/side-by-side-txt-img', 'block', $sbs_block_args);?>
     </div>
 
 <?php get_footer();?>

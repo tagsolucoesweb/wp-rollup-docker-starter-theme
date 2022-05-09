@@ -14,5 +14,5 @@
             <?php $teamBtnArgs = array('link' => get_the_permalink(), 'text' => 'saiba mais');?>
             <?php get_template_part('components/buttons/sh-square-small', 'button', $teamBtnArgs);?>
         </div>
-    <?php endwhile;?>
+    <?php endwhile; wp_reset_postdata();?>
 <?php endif;?>
