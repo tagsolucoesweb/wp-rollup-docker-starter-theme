@@ -20,6 +20,9 @@
         <?php get_template_part('components/team-grid/team-grid', 'block');?>
         <?php $sbs_block_args = get_field('sh-side-by-side');?>
         <?php get_template_part('components/side-by-side-txt-img/side-by-side-txt-img', 'block', $sbs_block_args);?>
+        <?php $map_block_args = get_field('sh-map-detail');?>
+        <?php get_template_part('components/map-and-contact/map-and-contact', 'block', $map_block_args);?>
+        
     </div>
 
 <?php get_footer();?>
