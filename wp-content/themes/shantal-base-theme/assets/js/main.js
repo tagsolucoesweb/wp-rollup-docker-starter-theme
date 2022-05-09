@@ -7,6 +7,7 @@ import '../scss/_form.scss'
 import '../../components/buttons/sh-buttons'
 //components
 import '../../components/main-nav/main-nav'
+import '../../components/hero-rounded-slider/hero-rounded-slider'
 import '../../components/paragraph-block/paragraph-block'
 import '../../components/wave-cta-block/wave-cta-block'
 import '../../components/slider-items/slider-items'

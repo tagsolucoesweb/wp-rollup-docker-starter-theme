@@ -1,6 +1,8 @@
 <?php get_header();?>
 
     <div class="shantal-front-page">
+        <?php $hero_slides_block_args = get_field('hero-slides');?> 
+        <?php get_template_part('components/hero-rounded-slider/hero-rounded-slider', 'block', $hero_slides_block_args);?>
         <?php $paragraph_block_args = get_field('sh-paragraph-block');?> 
         <?php get_template_part('components/paragraph-block/paragraph', 'block', $paragraph_block_args);?>
         <?php $wave_cta_args = get_field('sh-wave-cta');?>
@@ -11,7 +13,7 @@
             $slides = get_posts_to_array($querySlides); 
             $slides_args = array('slides-per-page' => '3', 'slide-type'=> 'sqr-rounded', 'slides' => $slides);
         ?>
-        <?php get_template_part('components/slider-4-items/slider-4-items', 'block', $slides_args);?>
+        <?php get_template_part('components/slider-items/slider-items', 'block', $slides_args);?>
     </div>
 
 <?php get_footer();?>
