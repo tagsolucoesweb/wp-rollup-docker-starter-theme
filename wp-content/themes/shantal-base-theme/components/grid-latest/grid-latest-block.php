@@ -7,6 +7,10 @@
                         get_template_part('components/blog-posts/blog-posts', 'grid-content');
                         break;
                     
+                    case 'team':
+                        get_template_part('components/team-grid/team', 'grid-content');
+                        break;
+                    
                     default:
                         get_template_part('components/blog-posts/blog-posts', 'grid-content');
                         break;
