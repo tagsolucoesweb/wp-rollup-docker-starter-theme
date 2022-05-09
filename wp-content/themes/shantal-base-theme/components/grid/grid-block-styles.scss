@@ -1,0 +1,19 @@
+.sh-grid-block-outer {
+  .sh-grid-block-inner {
+    .sh-grid-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 0 0 100%;
+      gap: 20px;
+
+      @include breakpoint(sm-tablet) {
+        flex: 0 0 calc(100% - 20px / 2);
+      }
+
+      @include breakpoint(lg-tablet) {
+        flex: 0 0 calc(100% / 3);
+      }
+    }
+  }
+}

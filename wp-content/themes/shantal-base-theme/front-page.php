@@ -15,6 +15,8 @@
         ?>
         <?php get_template_part('components/slider-items/slider-items', 'block', $slides_args);?>
         <?php get_template_part('components/testimonial-slider/testimonial-slider', 'block');?>
+
+        <?php get_template_part('components/blog-posts/blog-posts', 'block');?>
         
     </div>
 

@@ -1,0 +1,43 @@
+.sh-blog-posts-outer {
+  margin: 50px 0;
+
+  .sh-blog-posts-inner {
+    h2 {
+      text-align: center;
+      padding-top: 50px;
+      font: 400 32px / 64px $main-font;
+      margin-bottom: 60px;
+
+      @include breakpoint(sm-tablet) {
+        font: 400 42px / 84px $main-font;
+      }
+    }
+
+    @include container;
+
+    .sh-post-item {
+      max-width: 300px;
+      margin: 0 auto;
+
+      @include breakpoint(sm-tablet) {
+        width: 50%;
+      }
+
+      .post-img {
+        text-align: center;
+
+        @include breakpoint(sm-tablet) {
+          text-align: left;
+        }
+      }
+
+      .post-excerpt {
+        text-align: center;
+
+        @include breakpoint(sm-tablet) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
