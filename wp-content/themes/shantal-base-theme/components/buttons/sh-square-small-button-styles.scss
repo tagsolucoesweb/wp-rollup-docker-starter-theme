@@ -9,7 +9,7 @@
     transition: background-color 0.5s ease;
     background-color: $button-bg-color;
     color: $button-text-color;
-    font: 400 18px / 21.09px $main-font;
+    font: 400 16px / 140% $main-font;
     box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 
     &:hover {

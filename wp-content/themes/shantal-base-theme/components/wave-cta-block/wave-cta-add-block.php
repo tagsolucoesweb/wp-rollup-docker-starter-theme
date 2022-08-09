@@ -1,16 +1,16 @@
 
 <style>
-    .sh-wave-cta-block-outer{
+    .sh-wave-cta-block-outer.add{
         background-image: url(<?= $args['mobile-bg']['url'];?>)
     }
     @media screen AND (min-width:768px){
-        .sh-wave-cta-block-outer{
+        .sh-wave-cta-block-outer.add{
             background-image: url(<?= $args['desktop-bg']['url'];?>)
         }
     }
 </style>
 
-<div class="sh-wave-cta-block-outer">
+<div class="sh-wave-cta-block-outer add">
     <div class="sh-wave-cta-block-inner <?php echo isset($args['position']) ? 'cta-btn-pos-' . $args['position'] : 'cta-btn-pos-center';?>">
         <h2><?= $args['text'];?></h2>
         <?php $linkArgs = array('link' => $args['link']['url'], 'text' => $args['link']['title']);?>

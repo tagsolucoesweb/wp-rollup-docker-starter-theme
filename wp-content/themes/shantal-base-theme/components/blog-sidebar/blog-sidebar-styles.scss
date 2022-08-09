@@ -1,0 +1,50 @@
+.sh-sidebar {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  form {
+    .screen-reader-text {
+      display: none;
+    }
+
+    input[type="search"] {
+      width: 80%;
+      padding: 5px;
+      border: 1px solid #c1c1c1;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      display: none;
+    }
+  }
+
+  h4 {
+    color: $primary-color;
+    font: 700 16px / 140% $main-font;
+    text-transform: uppercase;
+  }
+
+  .blog-posts-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+
+    .blog-post {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        max-width: 102px;
+      }
+
+      h5 {
+        color: $primary-color;
+        flex-basis: 50%;
+      }
+    }
+  }
+}

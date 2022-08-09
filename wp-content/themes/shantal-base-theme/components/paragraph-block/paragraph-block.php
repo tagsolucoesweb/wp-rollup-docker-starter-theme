@@ -5,7 +5,17 @@
         </div>
     <?php endif;?>
     <div class="sh-paragraph-block-inner">
-        <?= $args['text'];?>
+        <div class="sh-accordion-content">
+            <div class="sh-accordion-content-inner">
+                <?= $args['text'];?>
+            </div>
+        </div>
+        <!--
+        <div class="sh-accordion-btn-wrap">
+            <?php $slidebtn = array('text' => 'saiba mais', 'link' => '#');?>
+            <?php get_template_part('components/buttons/sh-square-small', 'button', $slidebtn);?>
+        </div>
+        -->
     </div>
     <?php if($args['right-img'] && !empty($args['right-img'])):?>
         <div class="sh-paragraph-img sh-paragraph-img-right">

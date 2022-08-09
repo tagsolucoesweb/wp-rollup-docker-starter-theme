@@ -4,15 +4,19 @@
   a {
     display: inline-block;
     border-radius: 50px;
-    max-width: 280px;
+    max-width: 210px;
     width: 100%;
     padding: 12px 0;
     text-align: center;
     transition: background-color 0.5s ease;
     background-color: $button-bg-color;
     color: $button-text-color;
-    font: 400 22px/25px $main-font;
+    font: 400 14px / 120% $main-font;
     text-transform: uppercase;
+
+    @include breakpoint(sm-tablet) {
+      max-width: 300px;
+    }
 
     &:hover {
       background-color: $button-bg-hover-color;

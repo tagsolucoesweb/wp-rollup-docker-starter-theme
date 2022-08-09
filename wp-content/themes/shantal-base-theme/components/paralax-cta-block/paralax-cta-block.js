@@ -1,0 +1,1 @@
+import './paralax-cta-styles.scss';

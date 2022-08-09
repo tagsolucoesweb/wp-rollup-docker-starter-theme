@@ -1,13 +1,14 @@
 <?php $posts = new WP_Query( array( 'post_type'=> 'post', 'posts_per_page' => 3) );?>
 <?php if($posts->have_posts()):?>
     <?php while($posts->have_posts()): $posts->the_post();?>
-        <div class="sh-post-item">
+        <a href="<?php the_permalink();?>" class="sh-post-item">
             <div class="post-img">
-                <?php the_post_thumbnail('medium');?>
+                <?php $postImg = get_field('sh-post-thumbnail');?>
+                <img src="<?= $postImg['url'];?>" alt="<?= $postImg['alt'];?>" title="<?= $postImg['title'];?>">
             </div>
             <div class="post-excerpt">
                 <?php the_excerpt();?>
             </div>
-        </div>
+        </a>
     <?php endwhile; wp_reset_postdata();?>
 <?php endif;?>

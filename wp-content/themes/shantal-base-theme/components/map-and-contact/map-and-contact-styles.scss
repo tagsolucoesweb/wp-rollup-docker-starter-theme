@@ -2,11 +2,6 @@
   .sh-contact-n-map-inner {
     @include container;
 
-    h3 {
-      font: 400 35px / 52px $main-font;
-      margin-bottom: 13px;
-    }
-
     .sh-contact-n-map {
       display: flex;
       flex-direction: column;

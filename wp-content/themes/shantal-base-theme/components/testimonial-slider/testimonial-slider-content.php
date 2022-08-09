@@ -5,7 +5,7 @@
                 <div class="sh-testimonial-slide swiper-slide">
                     <div class="sh-testimonial-slide-inner">
                         <div class="slide-text">
-                            <?= $slide['content'];?>
+                            <?= get_the_excerpt($index);?>
                         </div>
                         <h4 class="slide-author"><?= $slide['title'];?></h4>
                     </div>

@@ -4,8 +4,8 @@
         <div class="sh-slider-wrap swiper-wrapper">
             <?php foreach($args['slides'] as $index => $slide):?>
                 <div class="sh-slide swiper-slide">
-                    <div class="slide-img">
-                        <img src="<?= $slide['sh-post-thumbnail']['url'];?>" alt="">
+                    <div class="slide-img" style="min-height: 100px">
+                        <img src="<?= $slide['sh-post-icon']['url'];?>" alt="">
                     </div>
                     <h4 class="slide-title"><?= $slide['title'];?></h4>
                     <div class="slide-text">

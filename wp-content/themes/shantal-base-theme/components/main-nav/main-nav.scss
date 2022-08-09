@@ -1,39 +1,32 @@
+#menu-toggle {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 20px;
+
+  @include breakpoint(lg-tablet) {
+    display: none;
+  }
+
+  svg {
+    path {
+      stroke: $primary-color;
+    }
+  }
+}
+
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 20px;
+  text-align: right;
 
   @include breakpoint(lg-tablet) {
-    flex-basis: 60%;
-    gap: 60px;
-  }
-
-  .obj-header-icons {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 42px;
-
-    span {
-      cursor: pointer;
-
-      @include breakpoint(lg-tablet) {
-        display: none;
-      }
-    }
-
-    a {
-      svg {
-        path {
-          stroke: $main-text-color;
-        }
-      }
-    }
   }
 
   .main-menu-wrap {
-    flex-basis: 80%;
+    flex-basis: 100%;
     display: block;
     position: fixed;
     top: 0;
@@ -44,9 +37,11 @@ nav {
     height: 100vh;
     background-color: rgb(255 255 255 / 97%);
     transition: all 0.3s ease;
+    z-index: 9999;
+    justify-content: space-between;
 
     @include breakpoint(lg-tablet) {
-      display: inline-block;
+      display: flex;
       position: initial;
       height: auto;
       min-width: unset;
@@ -54,7 +49,11 @@ nav {
       background-color: transparent;
     }
 
-    .menu-menu-main-container {
+    @include breakpoint(lg-desktop) {
+      justify-content: space-between;
+    }
+
+    .menu-main-header-nav-container {
       padding: 0 40px 40px;
 
       @include breakpoint(lg-tablet) {
@@ -73,14 +72,61 @@ nav {
         @include breakpoint(lg-tablet) {
           flex-direction: row;
           margin-top: unset;
-          justify-content: end;
+          justify-content: center;
         }
 
         li {
           a {
-            font: 500 16px/20px $main-font;
+            font: 500 13px / 20px $main-font;
+
+            @include breakpoint(sm-desktop) {
+              font: 500 16px/20px $main-font;
+            }
+
             color: $main-text-color;
             white-space: nowrap;
+          }
+
+          ul {
+            visibility: hidden;
+            overflow: hidden;
+            width: auto;
+            padding-left: 30px;
+            transition: all 0.5s ease-out;
+            margin: 0;
+
+            @include breakpoint(lg-tablet) {
+              background-color: $white;
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              padding: 0 20px;
+              border-radius: 8px;
+            }
+
+            li {
+              &:first-child {
+                margin-top: 24px;
+              }
+
+              text-align: left;
+
+              @include breakpoint(lg-tablet) {
+                &:last-child {
+                  margin-bottom: 24px;
+                }
+              }
+
+              a {
+                font: 400 14px/20px $main-font;
+                color: $main-font;
+
+                @include breakpoint(lg-tablet) {
+                  color: $darkgray;
+                }
+              }
+            }
           }
         }
       }

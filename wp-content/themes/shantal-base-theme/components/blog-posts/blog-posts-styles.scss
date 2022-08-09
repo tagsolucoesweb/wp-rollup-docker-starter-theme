@@ -6,7 +6,6 @@
       text-align: center;
       padding-top: 50px;
       font: 400 32px / 64px $main-font;
-      margin-bottom: 60px;
 
       @include breakpoint(sm-tablet) {
         font: 400 42px / 84px $main-font;
@@ -28,10 +27,21 @@
         @include breakpoint(sm-tablet) {
           text-align: left;
         }
+
+        img {
+          max-width: 100%;
+        }
       }
 
       .post-excerpt {
         text-align: center;
+        color: $darkgray;
+        font: 400 18px / 27px $main-font;
+        margin-top: 10px;
+
+        @include breakpoint(sm-tablet) {
+          font: 400 20px / 37.5px $main-font;
+        }
 
         @include breakpoint(sm-tablet) {
           text-align: left;

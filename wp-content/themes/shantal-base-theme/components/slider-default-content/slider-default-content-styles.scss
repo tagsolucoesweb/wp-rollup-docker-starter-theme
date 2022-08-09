@@ -1,8 +1,13 @@
 .sh-slider-default {
   .sh-slider-wrap {
     .sh-slide {
+      position: relative;
+      padding-bottom: 60px;
+
       .slide-img {
         img {
+          display: block;
+          margin: 0 auto;
           max-width: 100%;
         }
       }
@@ -17,6 +22,11 @@
         font: 400 18px/25.5px $main-font;
         text-align: center;
 
+        @include breakpoint(lg-tablet) {
+          height: 50px;
+          overflow: hidden;
+        }
+
         p {
           font: 400 18px/25.5px $main-font;
           text-align: center;
@@ -24,7 +34,9 @@
       }
 
       .sh-square-small-button-wrap {
-        margin: 22px auto 0;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
       }
     }
   }

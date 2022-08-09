@@ -1,3 +1,5 @@
+<?php /* Template Name: Lista de Componentes */ ?>
+
 <?php get_header();?>
 
     <div class="shantal-front-page">

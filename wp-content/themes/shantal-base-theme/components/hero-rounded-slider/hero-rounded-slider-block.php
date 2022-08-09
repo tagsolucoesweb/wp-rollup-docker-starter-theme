@@ -19,7 +19,8 @@
                                     </div>
                                 <?php endif;?>
                                 <?php if($slide['cta'] && !empty($slide['cta'])):?>
-                                    <?php get_template_part('components/buttons/sh-rounded', 'button');?>
+                                    <?php $btnArgs = array('text' => $slide['cta']['title'], 'link' => $slide['cta']['url']);?>
+                                    <?php get_template_part('components/buttons/sh-rounded', 'button', $btnArgs);?>
                                 <?php endif;?>
                             </div>
                         </div>

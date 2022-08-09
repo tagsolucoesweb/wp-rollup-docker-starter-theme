@@ -24,9 +24,8 @@
       }
 
       svg {
-        path,
-        circle {
-          stroke: #888;
+        path {
+          fill: #888;
         }
       }
     }
@@ -36,6 +35,10 @@
 
       @include breakpoint(lg-tablet) {
         right: -6%;
+      }
+
+      svg {
+        transform: rotate(90deg);
       }
     }
 
@@ -47,7 +50,7 @@
       }
 
       svg {
-        transform: rotate(180deg);
+        transform: rotate(270deg);
       }
     }
   }
