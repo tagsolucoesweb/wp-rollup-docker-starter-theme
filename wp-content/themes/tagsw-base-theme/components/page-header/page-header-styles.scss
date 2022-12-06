@@ -1,0 +1,46 @@
+.sh-page-header {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 200px;
+
+  @include breakpoint(lg-tablet) {
+    height: 350px;
+  }
+
+  h1 {
+    text-align: center;
+    font: 400 22px / 160% $main-font;
+    color: $light-gold;
+    padding-top: calc((200px - 44px) / 2);
+    text-transform: uppercase;
+
+    @include breakpoint(lg-tablet) {
+      padding-top: 200px;
+    }
+
+    @include breakpoint(lg-tablet) {
+      font: 400 28px / 160% $main-font;
+    }
+
+    &.sh-dark-bg {
+      color: #fff;
+    }
+  }
+
+  .sh-header-bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -26,10 +26,10 @@ wp-content/*
 wp-content/plugins
 !wp-content/themes
 wp-content/themes/*
-!wp-content/themes/shantal-base-theme
+!wp-content/themes/tagsw-base-theme
 
-wp-content/themes/shantal-base-theme/assets/js/bundle.js
-wp-content/themes/shantal-base-theme/assets/css/bundle.css
+wp-content/themes/tagsw-base-theme/assets/js/bundle.js
+wp-content/themes/tagsw-base-theme/assets/css/bundle.css
 
 # These are some examples of commonly ignored file patterns.
 # You should customize this list as applicable to your project.

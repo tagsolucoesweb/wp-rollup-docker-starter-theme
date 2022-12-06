@@ -1,1 +1,0 @@
-import './slider-default-content-styles.scss';

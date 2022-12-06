@@ -15,6 +15,7 @@
     "lint-scss-fix": "npx stylelint --fix 'wp-content/themes/shantal-base-theme/**/*.scss'",
     "lint-js": "npx eslint wp-content/themes/shantal-base-theme/**/*.js",
     "lint-js-fix": "npx eslint --fix wp-content/themes/shantal-base-theme/**/*.js",
+    "update-db-dump": "docker exec wp-docker-rollup_db_1 mysqldump -uroot -p'password' wordpress > wp-data/mysql.sql",
     "prepare": "husky install"
   },
   "repository": {

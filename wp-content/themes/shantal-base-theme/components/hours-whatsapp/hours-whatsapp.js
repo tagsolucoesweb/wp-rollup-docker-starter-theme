@@ -1,1 +1,0 @@
-import './hours-whatsapp-styles.scss'

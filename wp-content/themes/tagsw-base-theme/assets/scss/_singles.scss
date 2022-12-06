@@ -1,0 +1,169 @@
+.sh-single-page,
+.sh-single-post {
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+
+    li {
+      padding-bottom: 10px;
+    }
+  }
+
+  p,
+  ul {
+    padding-bottom: 15px;
+    font: 400 14px / 140% $main-font;
+    letter-spacing: -1%;
+    color: $gray-2;
+
+    @include breakpoint(lg-tablet) {
+      font: 400 16px / 140% $main-font;
+    }
+  }
+
+  h3 {
+    font: 400 24px / 160% $main-font;
+
+    @include breakpoint(lg-tablet) {
+      font: 400 28px / 160% $main-font;
+    }
+
+    color: $gray-2;
+    padding: 15px 0;
+  }
+
+  
+
+  .sh-side-by-side-txt-img-outer {
+    margin-bottom: 0;
+
+    .sh-side-by-side-txt-img-inner {
+      .sbs-wrap {
+        margin-bottom: 32px;
+
+        .sh-img-wrap {
+          flex-basis: 50%;
+          height: auto;
+        }
+
+        .sh-text-wrap {
+          flex-basis: 75%;
+
+          .sh-sbs-content {
+            p,
+            ul li {
+              font: 400 14px / 120% $main-font;
+
+              @include breakpoint(lg-tablet) {
+                font: 400 16px / 120% $main-font;
+              }
+            }
+
+            ul {
+              list-style: square;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sh-rounded-button-wrap {
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+  }
+}
+
+.sh-single-post {
+  .sh-single-post-flexbox {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 20px;
+    @include breakpoint(sm-tablet){
+      flex-direction: row;
+    }
+
+    .post-content {
+      flex-basis: 75%;
+
+      .sh-content-top {
+        @include container;
+        padding-bottom: 20px;
+
+        h2 {
+          font: 600 28px / 100% $main-font;
+          margin: 20px 0 13px;
+          color: $red;
+        }
+
+        h4{
+          font: 600 16px / 120% $main-font;
+          margin-bottom: 20px;
+          color: $gray;
+        }
+
+        p,div {
+          font: 400 14px / 120% $main-font;
+
+          @include breakpoint(lg-tablet) {
+            font: 400 16px / 120% $main-font;
+          }
+
+          iframe{
+            width: 100%;
+            height: 400px;
+            @include breakpoint(sm-tablet){
+              height: 600px;
+            }
+          }
+        }
+      }
+      .sh-thubmnail-wrap{
+        @include container;
+      }
+      .alignleft{
+        float: left;
+        margin: 0px 20px 20px 0;
+      }
+    }
+
+    .sh-sidebar {
+      flex-basis: 100%;
+      width: 95%;
+      margin: 0 auto 20px;
+      @include breakpoint(sm-tablet){
+        flex-basis: 25%;
+      }
+    }
+  }
+}
+
+.single-cirurgias{
+  .post-content{
+    padding-top: 40px;
+  }
+  .sh-side-by-side-txt-img-outer{
+    .sh-side-by-side-txt-img-inner{
+      .sbs-wrap{
+        .sh-text-wrap{
+          flex-basis: 100%;
+          order: 1;
+          @include breakpoint(lg-tablet){
+            flex-basis: 66%;
+            order: 2;
+          }
+        }
+        .sh-img-wrap{
+          flex-basis: 100%;
+          order:2;
+          @include breakpoint(lg-tablet){
+            flex-basis: 32%;
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}

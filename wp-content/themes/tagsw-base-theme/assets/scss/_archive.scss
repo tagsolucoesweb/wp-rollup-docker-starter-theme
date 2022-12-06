@@ -1,0 +1,99 @@
+.sh-archive-outer {
+  .sh-archive-inner {
+    .sh-archive-tagline {
+      @include container;
+
+      margin-top: 20px;
+
+      p {
+        font: 400 14px / 140% $main-font;
+        color: $gray-2;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @include breakpoint(lg-tablet) {
+          font: 400 16px / 140% $main-font;
+        }
+      }
+    }
+
+    .sh-cpt-grid-wrapper {
+      .sh-cpt-grid {
+        @include container;
+
+        display: grid;
+        gap: 20px;
+        margin: 40px auto;
+        grid-template-columns: repeat(1, 1fr);
+
+        @include breakpoint(sm-tablet) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint(lg-tablet) {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .sh-cpt-grid-item {
+          position: relative;
+          padding-bottom: 60px;
+
+          .grid-item-image {
+            text-align: center;
+
+            img {
+              max-width: 100%;
+              margin: 0 auto;
+            }
+          }
+
+          .grid-item-title {
+            font: 700 20px / 140% $main-font;
+            text-align: center;
+            margin: 14px 0 8px;
+          }
+
+          .grid-item-text {
+            font: 400 14px / 140% $main-font;
+            text-align: center;
+
+            @include breakpoint(lg-tablet) {
+              height: 93px;
+              overflow: hidden;
+            }
+
+            p {
+              font: 400 16px / 140% $main-font;
+              text-align: center;
+            }
+          }
+
+          .sh-square-small-button-wrap {
+            margin: 22px auto 0;
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            a {
+              font: 400 15px / 120% $main-font;
+            }
+          }
+        }
+      }
+    }
+
+    .sh-side-by-side-txt-img-outer {
+      .sh-side-by-side-txt-img-inner {
+        .sbs-wrap {
+          gap: 32px;
+
+          .sh-img-wrap {
+            flex-basis: 40%;
+          }
+        }
+      }
+    }
+  }
+}

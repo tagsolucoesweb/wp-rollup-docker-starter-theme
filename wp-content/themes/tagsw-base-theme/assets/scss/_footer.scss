@@ -1,0 +1,109 @@
+$footer-font: $main-font;
+
+footer {
+  background: $red;
+  margin-top: -10px;
+
+  .shantal-footer-inner {
+    @include container;
+
+    padding: 38px 0 0;
+
+    .shantal-footer-content {
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: center;
+      gap: 35px;
+
+      .shantal-footer-item {
+        color: $white;
+        font: 400 14px / 16px $main-font;
+
+        @include breakpoint(sm-tablet) {
+          font: 400 16px / 21px $main-font;
+        }
+
+        p,
+        h3 {
+          color: $white;
+        }
+
+        svg {
+          width: 25px;
+          height: 25px;
+
+          path {
+            fill: $white;
+          }
+        }
+
+        strong {
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font: 400 14px / 16px $main-font;
+
+          @include breakpoint(sm-tablet) {
+            font: 400 16px / 21px $main-font;
+          }
+        }
+
+        .sh-footer-logo-wrap {
+          margin-bottom: 50px;
+          overflow-y: hidden;
+          img{
+            max-width: 100%;
+          }
+        }
+
+        h3 {
+          margin-bottom: 30px;
+          text-transform: uppercase;
+        }
+
+        .sh-footer-address {
+          margin-bottom: 23px;
+        }
+
+        .sh-footer-phone {
+          margin-bottom: 23px;
+
+          @include breakpoint(sm-tablet) {
+            margin-bottom: 50px;
+          }
+        }
+
+        .sh-footer-text {
+          margin-bottom: 23px;
+
+          @include breakpoint(sm-tablet) {
+            margin-bottom: 50px;
+          }
+        }
+
+        .sh-social-network-outer {
+          .sh-social-network-inner {
+            justify-content: flex-start;
+          }
+        }
+
+        .menu-menu-rodape-container {
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+  .sh-footer-copyright{
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    padding: 10px 0;
+  }
+}

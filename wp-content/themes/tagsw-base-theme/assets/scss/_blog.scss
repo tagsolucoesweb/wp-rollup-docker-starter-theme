@@ -1,0 +1,109 @@
+.blog-page {
+  .sh-blog-flexbox {
+    @include container;
+
+    display: flex;
+    gap: 64px;
+    margin: 32px auto;
+
+    .sh-posts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex-basis: 100%;
+      text-align: center;
+
+      @include breakpoint(sm-tablet) {
+        flex-basis: 70%;
+        text-align: left;
+      }
+
+      .post {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include breakpoint(lg-tablet) {
+          align-items: center;
+          gap: 32px;
+          flex-direction: row;
+        }
+
+        .post-thumbnail {
+          img {
+            max-width: 250px;
+            height: auto;
+          }
+        }
+
+        .post-text {
+          h3 {
+            font: 600 18px / 140% $main-font;
+            color: $red;
+            margin-bottom: 20px;
+          }
+
+          .post-excerpt {
+            margin-bottom: 20px;
+
+            p {
+              font: 400 16px / 120% $main-font;
+              color: $gray;
+            }
+          }
+          a {
+            width: auto;
+            color: $red;
+          }
+          
+        }
+      }
+
+      .pagination {
+        justify-content: flex-end;
+
+        h2.screen-reader-text {
+          display: none;
+        }
+
+        .nav-links {
+          align-items: center;
+          display: flex;
+          gap: 5px;
+
+          .page-numbers {
+            color: $blue;
+
+            &.current {
+              color: $gray;
+            }
+          }
+
+          .next,
+          .prev {
+            width: 20px;
+
+            svg {
+              fill: $gray;
+            }
+          }
+        }
+      }
+    }
+
+    .sh-sidebar {
+      display: none;
+
+      @include breakpoint (sm-tablet) {
+        display: flex;
+      }
+
+      flex-basis: 50%;
+      margin-top: 0;
+
+      @include breakpoint(lg-tablet) {
+        flex-basis: 25%;
+      }
+    }
+  }
+}

@@ -11,7 +11,7 @@ services:
       - ./docker-volumes/wp-app:/var/www/html # Full wordpress project
       - ./.htaccess:/var/www/html/.htaccess # Custom .htaccess to redirect the uploads folder to server 
       - ./wp-content/plugins:/var/www/html/wp-content/plugins/ # get wp-content files
-      - ./wp-content/themes/shantal-base-theme:/var/www/html/wp-content/themes/shantal-base-theme/
+      - ./wp-content/themes/tagsw-base-theme:/var/www/html/wp-content/themes/tagsw-base-theme/
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_NAME: "${DB_NAME}"

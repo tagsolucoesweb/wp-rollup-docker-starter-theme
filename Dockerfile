@@ -1,5 +1,4 @@
-FROM wordpress:5.8.2
-
+FROM wordpress:latest
 # install dos2unix (fix problem between CRLF and LF)
 RUN apt-get update
 RUN apt-get install -y dos2unix

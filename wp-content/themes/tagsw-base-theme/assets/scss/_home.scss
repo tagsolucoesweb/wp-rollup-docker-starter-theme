@@ -1,0 +1,246 @@
+.shantal-front-page,
+.shantal-agende-sua-consulta {
+
+  .sh-homepage-content{
+    background-image: url('../images/bg-home-content-mobile.jpg');
+    background-position: bottom;
+    background-size: 100%;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+    @include breakpoint(sm-tablet){
+      background-image: url('../images/bg-home-content.png');
+    }
+
+    .sh-hp-sec {
+      h2 {
+        font: 400 22px / 160% $main-font;
+        color: $gold;
+  
+        @include breakpoint(sm-tablet) {
+          font: 400 28px / 160% $main-font;
+          padding: 30px 0 20px;
+        }
+      }
+  
+      .sh-sec-text {
+        @include container;
+  
+        text-align: center;
+        font: 400 14px / 140% $main-font;
+  
+        @include breakpoint(sm-tablet) {
+          font: 400 16px / 140% $main-font;
+        }
+      }
+  
+      &.sh-hp-slider-sec {
+        padding-bottom: 100px;
+        color: $darkgray;
+  
+        h2 {
+          color: $blue;
+          margin: 40px 0;
+        }
+  
+        .sh-sec-text {
+          margin-bottom: 50px;
+  
+          p {
+            color: $darkgray;
+            text-align: center
+          }
+        }
+      }
+
+      &.sh-hp-grid-sec{
+        @include container;
+        padding: 40px 0;
+      }
+  
+      &.sh-sbs-sobre{
+        position: relative;
+        .sh-side-by-side-txt-img-outer{
+          margin-top:0;
+          padding-top: 150px;
+          margin-bottom: 0;
+          .sh-side-by-side-txt-img-inner{
+            .sbs-wrap{
+              @include breakpoint(lg-tablet){
+                gap: 0;
+              }
+              .sh-img-wrap{
+                order:2;
+                @include breakpoint(lg-tablet){
+                  order: 1;
+                }
+              }
+              .sh-text-wrap{
+                order: 1;
+                h3{
+                  color: $red;
+                }
+                @include breakpoint(lg-tablet){
+                  order: 2;
+                  flex-basis: 35%;
+                }
+              }
+            }
+          }
+        }
+        .has-tag{
+          .insta-cta-wrapper{
+            position: absolute;
+            bottom:0;
+            left: 0;
+            width: 100%;
+            justify-content: center;
+            display: none;
+            @include breakpoint(lg-tablet){
+              display: flex; 
+            }
+            .insta-cta{
+              background-color: $red;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              border-top-left-radius: 25px;
+              border-top-right-radius: 25px;
+              width: 250px;
+              padding: 20px 30px;
+              transition: all 1.5s ease;
+              .txt{
+                flex-basis: 80%;
+                font: 400 14px/120% $main-font;
+              }
+              .icon{
+                flex-basis: 20%;
+                svg{
+                  width: 30px;
+                  height: auto;
+                }
+              }
+            }
+          }
+          &:hover{
+            .insta-cta{
+              padding: 20px 30px 80px;
+            }
+          }
+        }
+      }
+
+      &.sh-sbs-home-video{
+        background-image: url('../images/bg-home-video-sec-mobile.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        margin-top: -130px;
+        position: relative;
+        @include breakpoint(mobile){
+          margin-top: -150px;
+        }
+        @include breakpoint(sm-tablet){
+          margin-top: -175px;
+        }
+        @include breakpoint(lg-tablet){
+          margin-top: -68px;
+          background-image: url('../images/bg-home-video-sec.png');
+        }
+        @include breakpoint(sm-desktop){
+          margin-top: -75px;
+        }
+        @include breakpoint(lg-desktop){
+          margin-top: -90px;
+          height: 800px;  
+        }
+        .sh-side-by-side-txt-img-outer{
+          flex-basis: 100%;
+          margin: 0;
+          .sh-side-by-side-txt-img-inner  {
+            margin-top:40px;
+            @include breakpoint(sm-tablet){
+              margin-top:0;
+            }
+            .sbs-wrap{
+              @include breakpoint(sm-tablet){
+                padding-top: 100px;
+              }
+              @include breakpoint(lg-tablet){
+                padding-top: unset;
+              }
+              .sh-img-wrap{
+                order:2;
+                iframe{
+                  width: 380px;
+                  height: 250px;
+                  max-width: 100%;
+                  @include breakpoint(lg-desktop){
+                    width: 580px;
+                    height: 350px;
+                  }
+                }
+              }
+              .sh-text-wrap{
+                order: 1;
+                text-align: center;
+                h3{
+                  font: 400 28px/120% $main-font;
+                  text-transform: none;
+                  color: $gray;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      &.sh-hp-maps{
+        @include container;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        @include breakpoint(sm-tablet){
+          gap: 50px;
+          flex-direction: row;
+        }
+        .map{
+          flex-basis: 50%;
+          margin-bottom: 40px;
+          h4{
+            text-align: center;
+            color: $red;
+            font: 600 20px/120% $main-font;
+            margin: 40px 0;
+          }
+          img{
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+  
+      &.sh-hp-blog{
+        h2{
+          color: $red;
+        }
+      }
+  
+      &.sh-hp-videos{
+        background-color: $light-blue;
+      }
+  
+      &.sh-hp-contato {
+        padding: 70px 0 25px;
+        h3 {
+          @include container;
+          text-transform: uppercase;
+          font: 400 28px / 140% $main-font;
+          margin-bottom: 40px;
+          color: $gold;
+        }
+      }
+    }
+  }
+}

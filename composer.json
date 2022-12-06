@@ -34,7 +34,7 @@
         }
     },
     "require": {
-        "wpackagist-plugin/ewww-image-optimizer": "6.4.2",
+        "wpackagist-plugin/ewww-image-optimizer":"6.9.2",
         "tagsolucoesweb/acf": "dev-main"
     }
 }
