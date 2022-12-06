@@ -53,7 +53,8 @@ footer {
         .sh-footer-logo-wrap {
           margin-bottom: 50px;
           overflow-y: hidden;
-          img{
+
+          img {
             max-width: 100%;
           }
         }
@@ -99,8 +100,10 @@ footer {
       }
     }
   }
-  .sh-footer-copyright{
+
+  .sh-footer-copyright {
     @include container;
+
     display: flex;
     justify-content: space-between;
     color: $white;

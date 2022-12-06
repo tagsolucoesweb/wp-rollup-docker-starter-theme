@@ -29,9 +29,7 @@ animateOnScrollEl.forEach( function(el) {
 })
 
 function animateScroll(el){
-    const docHeight = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
-        document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight ) - window.innerHeight - 200;
-
+    
     el.style.transform = 'translateY( '+( 100*2 )+'% )'
     window.addEventListener('scroll', () => {
         let scrollPos = 1 -( window.pageYOffset / (document.body.offsetHeight - window.innerHeight))

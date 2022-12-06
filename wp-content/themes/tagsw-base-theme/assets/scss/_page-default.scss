@@ -1,40 +1,47 @@
-.page{
-  .tagsw-page-content{
+.page {
+  .tagsw-page-content {
     @include container;
 
-    h1{
-      font-size: $h1-mobile-size;  
+    h1 {
+      font-size: $h1-mobile-size;
       line-height: 120%;
       font-weight: 600;
       font-family: $main-font;
-      @include breakpoint(sm-tablet){
+
+      @include breakpoint(sm-tablet) {
         font-size: $h1-size;
       }
     }
 
-    h2{
-      font-size: $h1-mobile-size;  
+    h2 {
+      font-size: $h1-mobile-size;
       line-height: 120%;
       font-weight: 600;
       font-family: $main-font;
-      @include breakpoint(sm-tablet){
+
+      @include breakpoint(sm-tablet) {
         font-size: $h2-size;
       }
     }
 
-    h3{
+    h3 {
       line-height: 120%;
       font-weight: 600;
       font-family: $main-font;
-      font-size: $h1-mobile-size;  
-      @include breakpoint(sm-tablet){
+      font-size: $h1-mobile-size;
+
+      @include breakpoint(sm-tablet) {
         font-size: $h3-size;
       }
     }
 
-    div, li, a, p{
-      font-size: $text-mobile-font-size;  
-      @include breakpoint(sm-tablet){
+    div,
+    li,
+    a,
+    p {
+      font-size: $text-mobile-font-size;
+
+      @include breakpoint(sm-tablet) {
         font-size: $text-font-size;
       }
     }

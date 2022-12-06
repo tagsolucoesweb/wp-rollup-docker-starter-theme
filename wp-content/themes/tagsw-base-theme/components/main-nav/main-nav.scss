@@ -24,7 +24,6 @@ nav {
   @include breakpoint(lg-tablet) {
     justify-content: space-between;
   }
-  
 
   .main-menu-wrap {
     flex-basis: 100%;
@@ -75,8 +74,8 @@ nav {
           justify-content: center;
         }
 
-        @include breakpoint(lg-desktop){
-          gap: 40px;  
+        @include breakpoint(lg-desktop) {
+          gap: 40px;
         }
 
         li {
@@ -137,7 +136,7 @@ nav {
       }
     }
 
-    .tagsw-logo-wrap{
+    .tagsw-logo-wrap {
       padding: 40px 40px 0;
       width: 200px;
 
@@ -163,22 +162,22 @@ nav {
   }
 }
 
-.sh-header-simple{
-    nav{
-      @include breakpoint(lg-tablet) {
-        flex-basis: 100%;
-      }
+.sh-header-simple {
+  nav {
+    @include breakpoint(lg-tablet) {
+      flex-basis: 100%;
     }
+  }
 }
 
-body.admin-bar{
-  nav{
-    .main-menu-wrap{
-      top:32px;
-      @include breakpoint(sm-tablet){
+body.admin-bar {
+  nav {
+    .main-menu-wrap {
+      top: 32px;
+
+      @include breakpoint(sm-tablet) {
         top: 0;
       }
     }
   }
 }
-

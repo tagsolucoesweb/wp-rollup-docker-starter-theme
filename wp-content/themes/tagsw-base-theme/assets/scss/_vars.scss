@@ -1,17 +1,8 @@
 // colors pallete
 $black: #000;
 $white: #fff;
-$new-gray: #aeb0b5;
 $red: #aa8491;
-$gold:#9f6215;
-$light-gold: #a18c50;
-$blue: #1f297f;
 $gray: #646464;
-$light-blue: #ecf2f9;
-$light-gray: #c4c4c4;
-$darkgray: #6a6a6a;
-$gray-2: #717171;
-$light-rose: #fff7f5;
 
 // defaults
 $container-max-width: 1600px;
@@ -21,13 +12,11 @@ $button-bg-color: transparent;
 $button-bg-hover-color: $red;
 $button-text-color: $red;
 $button-text-color-hover: $white;
-$header-background: rgba(255,255,255, .45);
-
+$header-background: rgb(255 255 255 / 45%);
 $h1-size: 36px;
 $h2-size: 28px;
 $h3-size: 22px;
 $text-font-size: 16px;
-
 $h1-mobile-size: 28px;
 $h2-mobile-size: 22px;
 $h3-mobile-size: 18px;
