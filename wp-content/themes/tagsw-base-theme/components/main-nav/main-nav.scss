@@ -6,12 +6,6 @@
   @include breakpoint(lg-tablet) {
     display: none;
   }
-
-  svg {
-    path {
-      stroke: $gold;
-    }
-  }
 }
 
 nav {
@@ -86,7 +80,7 @@ nav {
               font: 500 13px/20px $main-font;
             }
 
-            color: $gold;
+            color: $gray;
             white-space: nowrap;
             text-transform: uppercase;
           }
@@ -127,7 +121,7 @@ nav {
                 color: $main-font;
 
                 @include breakpoint(lg-tablet) {
-                  color: $darkgray;
+                  color: $gray;
                 }
               }
             }
